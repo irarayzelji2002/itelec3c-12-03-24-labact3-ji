@@ -1,0 +1,110 @@
+/* NAVBAR */
+nav {
+    position: fixed;
+}
+.navbar {
+    background-color: #900c3a !important;
+    background-image: linear-gradient(to right, #900c3a, #4d022c) !important;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+.navbar .container-fluid {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+.navbar-toggler-icon {
+    display: none;
+}
+.navbar-toggler {
+    color: #ffffff !important;
+    border: 0 !important;
+}
+.navbar-toggler:focus {
+    box-shadow: none !important;
+}
+.fa-bars {
+    font-size: 30px;
+    opacity: 1 !important;
+}
+.nav-logo {
+    height: 50px;
+}
+.navbar-nav {
+    align-items: end;
+}
+.navbar-collapsed {
+    height: 100%;
+}
+.nav-item {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    transition: margin-top 0.3s ease-in-out, margin-bottom 0.3s ease-in-out;
+}
+.nav-link {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-left: 10px;
+    margin-right: 10px;
+    position: relative;
+    margin: 0;
+    padding: 0 !important;
+    opacity: 1 !important;
+    text-align: center;
+    display: block;
+    text-wrap: nowrap;
+}
+.nav-link:hover,
+.nav-link:focus,
+.nav-link:active,
+.active {
+    color: #ffffff !important;
+    opacity: 1 !important;
+}
+
+.nav-link::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    visibility: hidden;
+    transition: width 0.3s ease-in-out;
+    margin: 0;
+}
+.nav-link:hover::after {
+    width: 100%;
+    visibility: visible;
+    opacity: 1;
+}
+
+@media screen and (min-width: 576px) {
+}
+@media (max-width: 768px) {
+    .navbar .container-fluid {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+    .navbar-nav {
+        margin: auto;
+        align-items: center;
+    }
+}
+@media (max-width: 767px) {
+    nav .ul-links {
+        border-radius: 20px;
+        width: 250px;
+    }
+}
+@media (max-width: 992px) {
+    .navbar .container-fluid {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
+@media (max-width: 1200px) {
+}

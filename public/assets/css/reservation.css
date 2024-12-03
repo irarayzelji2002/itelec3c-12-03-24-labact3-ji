@@ -1,0 +1,100 @@
+.reservation,
+.reservation-details,
+.check-reservation {
+    background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)
+        ),
+        url("/assets/elements/bg/entrance.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: calc(100vh - 76px);
+    background-position: center;
+}
+.reservation-card,
+.check-reservation-details-card {
+    width: 800px;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255);
+}
+.reservation-form-cont {
+    padding: 2.5rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.reservation-form .form-group,
+.check-reservation-form .form-group {
+    margin-bottom: 1rem;
+}
+.reservation-title {
+    text-align: center;
+}
+.reservation-details-title {
+    text-align: center;
+}
+.reservation-p {
+    font-size: 1rem;
+    margin-top: 0;
+}
+.form-check-label {
+    font-size: 1rem;
+}
+.btn-reg {
+    margin-top: 1rem;
+}
+.required-span {
+    color: red;
+}
+.err-msg {
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
+    font-weight: 600;
+}
+.err-msg-top {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* SUCCESS */
+.reservation-details .detail,
+.check-reservation .detail {
+    margin-bottom: 1rem;
+}
+.reservation-details-card {
+    width: 576px;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255);
+}
+.reservation-details .title-cont,
+.check-reservation .title-cont {
+    text-align: center;
+    margin-bottom: 1.3rem;
+}
+.reservation-details .success,
+.check-reservation .success {
+    color: rgb(0, 102, 0);
+}
+.reservation-details .error,
+.check-reservation .error {
+    color: rgb(167, 0, 0);
+}
+.light-grey {
+    color: grey;
+}
+
+@media only screen and (max-width: 576px) {
+    .reservation-form-cont {
+        padding: 0;
+    }
+    .reservation-card,
+    .reservation-details-card {
+        border-radius: 0;
+    }
+    .reservation-p {
+        font-size: 0.9rem;
+    }
+}

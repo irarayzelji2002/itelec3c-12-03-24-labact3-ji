@@ -1,0 +1,104 @@
+.homepage {
+    background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0)
+        ),
+        url("/assets/elements/bg/whole-hotel.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: calc(100vh - 76px);
+    background-position: center;
+    position: relative;
+}
+.homepage-title {
+    text-align: center;
+    color: white;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    font-size: 5rem;
+    padding: 0px 50px 0px 50px;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    width: fit-content;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+.homepage-title span {
+    display: block;
+}
+.hotel-transylvania-text {
+    color: #fec00f;
+    font-size: 8rem;
+    line-height: 1;
+}
+.btn-reserve {
+    margin-top: -30px;
+}
+@media only screen and (max-width: 992px) {
+    .homepage-title {
+        font-size: 4.5rem;
+    }
+    .hotel-transylvania-text {
+        font-size: 7.2rem;
+    }
+}
+@media only screen and (max-width: 885px) {
+    .hotel-transylvania-text {
+        font-size: 6.3rem;
+    }
+    .homepage-title {
+        font-size: 4rem;
+        padding: 0px 20px 0px 50px;
+    }
+    .btn-reserve {
+        margin-top: -40px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .homepage-title {
+        font-size: 3.5rem;
+        line-height: 1.5;
+    }
+    .hotel-transylvania-text {
+        font-size: 5.5rem;
+    }
+}
+@media only screen and (max-width: 667px) {
+    .hotel-transylvania-text {
+        font-size: 6.5rem;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .hotel-transylvania-text {
+        font-size: 5.5rem;
+    }
+    .homepage-title {
+        padding: 0px 30px 0px 30px;
+        font-size: 3rem;
+    }
+    .btn-reserve {
+        margin-top: -34px;
+    }
+}
+@media only screen and (max-width: 477px) {
+    .hotel-transylvania-text {
+        font-size: 4.5rem;
+    }
+    .homepage-title {
+        padding: 0px 5px 0px 5px;
+        font-size: 3rem;
+    }
+}
+@media only screen and (max-width: 360px) {
+    .hotel-transylvania-text {
+        font-size: 4rem;
+    }
+    .homepage-title {
+        padding: 0px 5px 0px 5px;
+        font-size: 2rem;
+    }
+    .btn-reserve {
+        margin-top: 0px;
+    }
+}

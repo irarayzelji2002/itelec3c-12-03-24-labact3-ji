@@ -1,0 +1,15 @@
+.error-page {
+    background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)
+        ),
+        url("/assets/elements/bg/entrance.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: calc(100vh - 76px);
+    background-position: center;
+}
+.error-page-cont {
+    padding-top: 2rem;
+}
