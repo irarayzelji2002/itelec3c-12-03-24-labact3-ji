@@ -1,36 +1,20 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ReservationController;
-use Illuminate\Support\Facades\DB;
 
 Route::get('/', function () {
-    return view('homepage');
-})->name('home');
-
-Route::get('/reservation', [ReservationController::class, 'showForm'])->name('reservation-form');
-
-Route::post('/reservation', [ReservationController::class, 'submitForm'])->name('reservation-submit');
-
-Route::get('/check-reservation', [ReservationController::class, 'showCheckReservationForm'])->name('check-reservation-form');
-
-Route::post('/check-reservation', [ReservationController::class, 'submitCheckReservationForm'])->name('check-reservation-submit');
-
-// Route::get('/reservation-details',function () {
-//     return view('reservation.reservationDetails');
-// })->name('reservation-details');
-
-Route::fallback(function () {
-    $error = "Page Not Found";
-    return response()->view('error.errorPage', ['error' => $error], 404);
+    return view('welcome');
 });
 
-Route::get('/test-db-connection', function () {
-    try {
-        // Try to fetch data from a table (replace 'your_table' with an existing table name)
-        $results = DB::table('reservations')->first();
-        return response()->json($results);
-    } catch (Exception $e) {
-        return response()->json(['error' => $e->getMessage()], 500);
-    }
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+require __DIR__.'/auth.php';

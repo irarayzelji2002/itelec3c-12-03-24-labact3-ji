@@ -23,8 +23,8 @@ return new class extends Migration
             $table->unsignedInteger('irjNoOfDays');
             $table->unsignedInteger('irjNoOfGuests');
             $table->string('irjSpecialRequest', 255)->nullable();
-            $table->decimal('irjRoomPrice', 10, 2)->after('irjRoomType');
-            $table->decimal('irjTotalPrice', 10, 2)->after('irjNoOfGuests');
+            $table->decimal('irjRoomPrice', 10, 2);
+            $table->decimal('irjTotalPrice', 10, 2);
             $table->timestamps();
         });
     }
